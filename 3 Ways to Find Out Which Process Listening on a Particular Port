@@ -1,0 +1,36 @@
+=====netstat======
+
+netstat (network statistics) command is used to display information concerning network connections, routing tables, interface stats and beyond. It is available on all Unix-like operating systems including Linux and also on Windows OS.
+
+In case you do not have it installed by default, use the following command to install it.
+
+$ sudo yum install net-tools	#RHEL/CentOS 
+$ sudo apt install net-tools	#Debian/Ubuntu
+$ sudo dnf install net-tools	#Fedora 22+
+
+
+netstat -vantp | grep -i <port>
+  ========lsof=========
+  
+  lsof command (LiSt Open Files) is used to list all open files on a Linux system. To install it on your system, type the command below.
+
+$ sudo yum install lsof	        #RHEL/CentOS 
+$ sudo apt install lsof		#Debian/Ubuntu
+$ sudo dnf install lsof		#Fedora 22+
+
+To find the process/service listening on a particular port, type (specify the port).
+ 
+ lsof -i :<port>
+  
+ =======fuser=======
+ fuser command shows the PIDs of processes using the specified files or file systems in Linux.
+
+You can install it as follows:
+
+$ sudo yum install psmisc	#RHEL/CentOS 
+$ sudo apt install psmisc	#Debian/Ubuntu
+$ sudo dnf install psmisc	#Fedora 22+
+
+You can find the process/service listening on a particular port by running the command below (specify the port).
+
+$ fuser 80/tcp
