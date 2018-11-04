@@ -8,3 +8,10 @@ Password: <type your password>
 [several days later]
 $ git push http://example.com/repo.git
 [your credentials are used automatically]
+
+
+
+to pull a specific branch other than master:
+git clone --depth 1 -b <branch_name> <repo_url>
+
+eg: git clone --depth 1 -b release-4.10.0.1 https://wwwin-github.cisco.com/cliqrtech/cumulus.git
