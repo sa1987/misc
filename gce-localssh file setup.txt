@@ -1,0 +1,17 @@
+
+
+To login to instance using ssh- [All steps performed on Linux Ubuntu 16.04]
+
+    Create a SSH Key ssh-keygen -t rsa -f ~/.ssh/gcloud_instance1 -C varunon9 here gcloud_instance1 is name of key file and varunon9 is username
+
+    Print the content of public key file cd ~/.ssh && cat gcloud_instance1.pub
+
+    Click on Edit VM instance details and go to ssh tab abd select add key
+    Paste the content of public key file (output of cd ~/.ssh && cat gcloud_instance1.pub) in ssh-keys text-area
+
+    enter image description here enter image description here
+
+    Click on Save
+
+    From terminal now you can login to your instance via ssh ssh -i gcloud_instance1 varunon9@35.200.201.56 where gcloud_instance1 is private key file (in .ssh directory) and varunon9 is username and 35.200.201.56 is external IP of your instance.
+
