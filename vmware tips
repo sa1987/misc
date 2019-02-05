@@ -1,0 +1,56 @@
+1.time sync
+
+2. vmware tool installation 
+yum install -y open-vm-tools
+reboot
+
+
+
+
+
+
+
+
+Procedure
+
+1
+	
+
+Right-click the RHEL 6 virtual machine in vSphere Client, then select Guest > Install/Upgrade VMware Tools.
+2
+	
+
+Log in to the virtual machine and mount the CD-ROM to access the VMware Tools installation package.
+
+mkdir /mnt/cdrom
+mount /dev/cdrom /mnt/cdrom
+mkdir /tmp/vmtools
+cd /tmp/vmtools
+
+3
+	
+
+Run the tar xf command to extract the VMware Tools package tar file.
+
+tar xf /mnt/cdrom/VMwareTools-*.tar.gz
+
+4
+	
+
+Make vmware-tools-distrib your working directory, and run the vmware-install.pl script.
+
+cd vmware-tools-distrib
+./vmware-install.pl
+
+Press Enter to finish the installation.
+5
+	
+
+Remove the vmtools temporary (temp) file that is created as an artifact of the installation process.
+
+rm -rf /tmp/vmtools
+
+6
+	
+
+Shut down virtual machine. 
